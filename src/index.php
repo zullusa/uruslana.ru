@@ -85,7 +85,7 @@
 		<div class="container clearfix">
 			<div class="grid_12">
 				<div class="filtr_bg">
-					<h1><span style="color:red;">U</span> Ruslana</h1>
+					<h1>U Ruslana</h1>
 					<h2>АВТОЗАПЧАСТИ</h2>
 					<p><a href="tel:+79269265677">+7 (926) 926 5677</a></p>
 					<p><a href="tel:+74959880636">+7 (495) 988 0636</a></p>

@@ -28,34 +28,6 @@
 	<script src="js/html5shiv.js"></script>
 	<script src="js/respond.src.js"></script>
 	<![endif]-->
-
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$("#ajax-contact-form").submit(function () {
-				var str = $(this).serialize();
-				$.ajax({
-					type: "POST",
-					url: "contact_form/contact_process.php",
-					data: str,
-					success: function (msg) {
-						// Message Sent - Show the 'Thank You' message and hide the form
-						if (msg == 'OK') {
-							result = '<div class="notification_ok">Ваше сообщение отправлено. Спасибо!</div>';
-							$("#fields").hide();
-						} else {
-							result = msg;
-						}
-						$('#note').html(result);
-					}
-				});
-				return false;
-			});
-
-		});
-	</script>
-
-	<!--script type="text/javascript">$($.date_input.initialize);</script-->
-
 </head>
 
 <body>
@@ -70,7 +42,6 @@
 		<div id="nav" class="fright">
 			<ul class="navigation">
 				<li data-slide="1"><img src="images/back_top_bg.png" /></li>
-<!--				<li data-slide="4">Галерея</li>-->
 				<li data-slide="6">УСЛУГИ</li>
 				<li data-slide="8">Контакты</li>
 				<div class="clear"></div>
@@ -101,49 +72,6 @@
 		</div>
 	</div>
 </div>
-
-<!--<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0.5">-->
-<!--	<div class="container clearfix">-->
-<!--		<div class="grid_12">-->
-<!--			<h1><span>Галерея работ</span></h1>-->
-<!--		</div>-->
-<!--		<div class="clear"></div>-->
-<!---->
-<!--		<div id="contenet">-->
-<!--			<div class="gallery-list">-->
-<!--				<div>-->
-					<?php
-//					$portfolio = "images/portfolio/";
-//					$dirs = glob("{$portfolio}*", GLOB_ONLYDIR);
-//					srand();
-//					$arr = array_rand($dirs, 8);
-//					$shuffle = array();
-//					foreach ($arr as $item){
-//						$shuffle[] = $dirs[$item];
-//					}
-//
-//					foreach ($shuffle as $dir) {
-//						$txt = file_get_contents("{$dir}/info.txt");
-//						$name = basename($dir);
-//						echo "<div class='grid_3'><div class='hover_img'><img src='{$dir}/0.jpg' alt=''/>";
-//						$files = glob("{$dir}/*.jpg");
-//						foreach ($files as $file) {
-//							if (basename($file, ".jpg") != "0") {
-//								echo "<span class='portfolio_zoom'><a href='{$file}' rel='prettyPhoto[{$name}]'></a></span>";
-//							}
-//						}
-//						echo "</div><div class='item_description'>{$txt}</div></div>";
-//					}
-					?>
-<!--					<div class="clear"></div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--		<div class="grid_12">-->
-<!--			<a href="./gallery.php" class="button" title="">Ещё</a>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--</div>-->
 
 <div class="slide" id="slide6" data-slide="6" data-stellar-background-ratio="0.5">
 	<div class="container clearfix">
@@ -187,26 +115,7 @@
 			<h1><span>Контакты</span></h1>
 		</div>
 		<div class="clear"></div>
-
-		<div class="grid_4">
-			<h4>Напишите нам</h4>
-			<div class="contact_form">
-				<div id="note"></div>
-				<div id="fields">
-					<form id="ajax-contact-form" action="">
-						<input type="text" name="name" value="" placeholder="Имя"/>
-						<input type="text" name="phone" value="" placeholder="Телефон" />
-						<input type="text" name="email" value="" placeholder="Email"/>
-						<textarea name="message" id="message" placeholder="Сообщение"></textarea>
-						<div class="clear"></div>
-						<input type="reset" class="contact_btn" value="Очистить"/>
-						<input type="submit" class="contact_btn send_btn" value="Отправить"/>
-						<div class="clear"></div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="grid_4 contact_det_block">
+		<div class="grid_6 contact_det_block">
 			<h4>Контакты</h4>
 			<ul class="foot_block_intouch">
 				<li class="touch_phone"><a href="tel:+79687557677">+7 (926) 926 5677</a></li>
@@ -215,11 +124,9 @@
 				<li class="touch_clock"><p>ПН - ВС 08:00 - 20:00</p></li>
 				<li class="touch_mail"><a href="mailto:info@sbrauto.ru">info@uruslana.ru</a></li>
 				<li class="touch_adress"><p>г.Королев ул.Северная 4А</p></li>
-				<!--li class="facebook"><a href="javascript:void(0);">http://facebook.com/companyname</a></li>
-				<li class="twitter"><a href="javascript:void(0);">http://twitter.com/companyname</a></li-->
 			</ul>
 		</div>
-		<div class="grid_4 omega">
+		<div class="grid_6 omega">
 			<h4>Информация</h4>
 			<p>При движении из Москвы проследовать мимо съездов в г. Королёв. Повернуть направо перед эстакадой, предназначенной для разворота.</p>
 			<p>При движении в Москву развернуться под эстакадой, которая идёт через Ж/Д.</p>
